@@ -48,7 +48,7 @@ namespace Todo.API.Controllers
             return NoContent();  // Successful: [204] retorna sucesso como 'sem conteúdo'
         }
 
-        // Versão > Update retornando objeto atualizado + 'Ok', ou retorna 400 (requisição ruim) para quando não é um id inválido(Não quebra o programa), e para quando não encontra retorna 404 NotFound
+        // Versão > Update retornando objeto atualizado + 'Ok', ou retorna 400 (requisição ruim) para quando é um id inválido(Não quebra o programa), e para quando não encontra retorna 404 NotFound
         [HttpPut("{id}")]
         public ActionResult<TodoModel> UpdateTodo(Guid id)
         {
